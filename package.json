@@ -1,0 +1,19 @@
+{
+  "name": "knowledgebase",
+  "version": "1.0.0",
+  "description": "A cool platform for knowledge exchange",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvenMarcus/KnowledgeBase.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SvenMarcus/KnowledgeBase/issues"
+  },
+  "homepage": "https://github.com/SvenMarcus/KnowledgeBase#readme"
+}
