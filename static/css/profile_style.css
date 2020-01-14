@@ -1,0 +1,139 @@
+header {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.profile-icon {
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.profile-head {
+    height: 40%;
+    width: 30%;
+    border: 5px solid black;
+    border-radius: 100%;
+    background-color: #4987aa;
+}
+
+.profile-body {
+    height: 60%;
+    width: 70%;
+    border: 5px solid black;
+    border-radius: 100%;
+    background-color: #4987aa;
+}
+
+.site {
+    height: 1800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-grid-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.box-grid {
+    margin-top: 5%;
+    width: 100%;
+    height:80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.row {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.box {
+    background-color: #4987aa;
+    height:50%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    border-radius: 15px;
+    box-shadow: 7px 10px 5px #afbaff;
+}
+
+.box-invisible {
+    height:100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 10px 10px 20px rgba(100,100,255,0.3);
+    border-radius: 100%;
+}
+
+footer {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #4987aa;
+}
+.outline {
+    position: relative;
+    top: -120px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-symbol {
+    height: 150px;
+    width: 150px;
+    background-color: #4987aa;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
