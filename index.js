@@ -30,12 +30,12 @@ app.get('/', (req, res) => res.render(path.join(__dirname, "static/index"), {
     }
 }));
 
-app.get('/feed', (req, res) => res.render(path.join(__dirname, "static/feed"), {
-    feedItems: [
-        component
-    ]
-}));
+// app.get('/feed', (req, res) => res.render(path.join(__dirname, "static/feed"), {
+//     feedItems: [
+//         component
+//     ]
+// }));
 
-app.get('/profile', (req, res) => res.sendFile(path.join(__dirname, "static/profile.html")))
+// app.get('/profile', (req, res) => res.sendFile(path.join(__dirname, "static/profile.html")))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
