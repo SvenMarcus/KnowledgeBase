@@ -13,11 +13,19 @@
     <div class="section">
         <div class="container">
             <div class="tile is-ancestor is-vertical">
-                <% for (const item of feedItems) { %>
-                <div class="tile is-child box">
-                    <%- item.render() %>
+                <div class="tile box">
+                    <p class="subtitle">Nächster Termin</p>
+                    <p></p>
                 </div>
-                <% } %>
+                
+                <p class="title">Neuigkeiten</p>
+                <div class="tile">
+                    <% for (const item of feedItems) { %>
+                    <div class="tile box">
+                        <%- item.render() %>
+                    </div>
+                    <% } %>
+                </div>
             </div>
         </div>
     </div>

@@ -2,9 +2,9 @@
     <p class="title">Gruppenvorschlag für <%= group.topicName %> </p>
     <p class="subtitle">Möchtest du dieser Gruppe beitreten?</p>
 
-    <div class="columns">
+    <div class="columns is-mobile">
         <% for (const member of group.members) {%>
-            <div class="column is-2">
+            <div class="column is-3">
                 <img src="img/user-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
                 <p style="text-align: center;"><%= member.fullName() %></p>
             </div>

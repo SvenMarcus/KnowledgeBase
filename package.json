@@ -4,6 +4,7 @@
   "description": "A cool platform for knowledge exchange",
   "scripts": {
     "start": "node index.js",
+    "pwa": "create-pwa --icon=\"static/img/logo_small.png\" --launch=\"static/img/logo_small.png\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/SvenMarcus/KnowledgeBase#readme",
   "dependencies": {
+    "create-pwa": "^2.2.0",
     "ejs": "^3.0.1",
     "ejs-lint": "^1.0.1",
     "express": "^4.17.1",

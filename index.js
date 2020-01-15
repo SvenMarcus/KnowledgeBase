@@ -20,7 +20,16 @@ const component = new GroupUserFeedComponent(dummyGroup);
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/static'));
 
-app.get('/', (req, res) => res.render(path.join(__dirname, "static/index"), { user: defaultUser }))
+app.get('/', (req, res) => res.render(path.join(__dirname, "static/index"), {
+    pageTitle: "Feed",
+    includePage: "feed",
+    includeData: {
+        feedItems: [
+            component
+        ]
+    }
+}));
+
 app.get('/feed', (req, res) => res.render(path.join(__dirname, "static/feed"), {
     feedItems: [
         component
