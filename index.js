@@ -7,7 +7,6 @@ const { Group } = require("./model/group.js")
 const { GroupUserFeedComponent } = require("./view/groupuserfeedcomponent.js")
 
 const dummyGroup = new Group("Technische Mechanik");
-const component = new GroupUserFeedComponent(dummyGroup);
 const defaultUser = new User("Franz", "Schubert");
 const defaultUser2 = new User("Herbert", "Müller");
 const defaultUser3 = new User("Jupp", "Dietrich");
@@ -15,6 +14,8 @@ const defaultUser3 = new User("Jupp", "Dietrich");
 defaultUser.joinGroup(dummyGroup);
 defaultUser2.joinGroup(dummyGroup);
 defaultUser3.joinGroup(dummyGroup);
+
+const component = new GroupUserFeedComponent(dummyGroup);
 
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/static'));
