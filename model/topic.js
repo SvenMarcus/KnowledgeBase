@@ -5,3 +5,5 @@ class Topic {
         this.expertLevel = 0;
     }
 }
+
+module.exports = { Topic: Topic }
