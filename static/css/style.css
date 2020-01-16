@@ -1,21 +1,31 @@
-*, root {
+*,
+root {
     --primary-color: #4987aa;
     --secondary-color: #a5bfcd;
     --icon-backdrop-color: #fcfcfd;
-    --default-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    --default-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
     --primary-text-color: white;
     --inverse-text-color: black;
     background: white;
     margin: 0px;
     padding: 0px;
     text-align: center;
-    color: var(--primary-text-color)
+    color: var(--primary-text-color);
+    font-family: 'Montserrat','Arial',sans-serif;
+}
+
+h1 {
+    color: var(--inverse-text-color);
+    font-size: 30px;
+    margin: 15px;
+    background: none;
 }
 
 h2 {
     color: var(--inverse-text-color);
     font-size: 20px;
     margin: 15px;
+    background: none;
 }
 
 .colored-box {
@@ -29,4 +39,3 @@ h2 {
     box-shadow: none;
     color: white;
 }
-
