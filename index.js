@@ -57,7 +57,7 @@ app.get('/', (req, res) => renderPageWithData(res, {
 app.post('/', (req, res) => {
     if (req.body.JOIN) {
         let group = groupRepository.getGroupById(req.body.JOIN);
-        if(!group) return;
+        if (!group) return;
 
         currentUser.joinGroup(group);
         res.redirect('/groups/' + req.body.JOIN);
@@ -75,12 +75,6 @@ app.get('/groups/:groupId', (req, res) => {
         }
     })
 });
-
-app.get('/feed', (req, res) => res.render(path.join(__dirname, "static/feed"), {
-    feedItems: [
-        component
-    ]
-}));
 
 app.get('/profile', (req, res) => res.sendFile(path.join(__dirname, "static/profile.html")))
 

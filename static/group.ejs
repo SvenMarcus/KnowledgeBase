@@ -1,11 +1,11 @@
 <div>
-    <div class="title"><%= group.topicName %> </div>
+    <div class="title"><%= group.topicName %></div>
     <div class="box">
         <p class="subtitle">Experten</p>
         <div class="columns">
             <% for(const expert of group.experts ) { %>
             <div class="column is-3">
-                <img src="img/user-graduate-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
+                <img src="/img/user-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
                 <p style="text-align: center;"><%= expert.fullName() %></p>
             </div>
             <% } %>
@@ -14,7 +14,7 @@
         <div class="columns">
             <% for(const member of group.members ) { %>
             <div class="column is-3">
-                <img src="img/user-graduate-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
+                <img src="/img/user-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
                 <p style="text-align: center;"><%= member.fullName() %></p>
             </div>
             <% } %>
