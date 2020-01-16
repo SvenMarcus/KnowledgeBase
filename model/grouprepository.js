@@ -15,7 +15,7 @@ class GroupRepository {
     }
 
     getGroupById(groupId) {
-        return GROUPS.find((value) => value.id === groupId);
+        return GROUPS.find((value) => value.id == groupId);
     }
 }
 
