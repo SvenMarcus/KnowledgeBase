@@ -5,6 +5,9 @@
         <title></title>
         <link rel="stylesheet" href="./css/chat_style.css">
         <link rel="stylesheet" href="./css/style.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    
     </head>
     <body>
         <div class="site-container">
@@ -112,45 +115,48 @@
                     </div>
                 </div>
             </div>
-            <footer>
+            <div class="myfooter">
                 <div class="doodle-outline">
                     <div class="doodle-button">
-                        Doodle
+                        <img src="icons/termine.svg" alt="">
                     </div>
                 </div>
                 <div class="chat-outline">
                     <div class="chat-button">
-                        Chat
+                        <img src="icons/chat.svg" alt="">
                     </div>
                 </div>
                 <div class="tutor-outline">
-                    <div class="tutor-button">
-                            Tutor
+                    <div class="tutor-button"">
+                        <img src="icons/tutor.svg" alt="">
                     </div>
                 </div>
-            </footer>
+            </div>
+
+
+            <script type="text/javascript">
+                let chat = document.getElementsByClassName("chat")[0];
+                let input = document.getElementsByClassName("chat-input")[0];
+                let inputForm = document.getElementsByClassName("chat-input-form")[0];
+        
+                let sendMessage = (message, origin) => {
+                    let element = "<div class = 'message-row origin'><div class = 'message'><p>placeholder</p></div></div>";
+                    element = element.replace("origin", origin);
+                    element = element.replace("placeholder", message);
+                    chat.innerHTML += element;
+                }
+        
+                input.onkeydown = function(event) {
+                    if (event.keyCode == 13) {
+                        sendMessage(input.value, 'own');
+                        input.value = "";
+                    }
+                }
+        
+        
+            </script>
         </div>
     </body>
 
-    <script type="text/javascript">
-        let chat = document.getElementsByClassName("chat")[0];
-        let input = document.getElementsByClassName("chat-input")[0];
-        let inputForm = document.getElementsByClassName("chat-input-form")[0];
 
-        let sendMessage = (message, origin) => {
-            let element = "<div class = 'message-row origin'><div class = 'message'><p>placeholder</p></div></div>";
-            element = element.replace("origin", origin);
-            element = element.replace("placeholder", message);
-            chat.innerHTML += element;
-        }
-
-        input.onkeydown = function(event) {
-            if (event.keyCode == 13) {
-                sendMessage(input.value, 'own');
-                input.value = "";
-            }
-        }
-
-
-    </script>
 </html>

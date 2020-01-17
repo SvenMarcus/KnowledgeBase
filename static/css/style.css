@@ -7,7 +7,7 @@ root {
     --default-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
     --primary-text-color: white;
     --inverse-text-color: black;
-    background: white;
+    /* background: white; */
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -28,6 +28,10 @@ h2 {
     font-size: 20px;
     margin: 15px;
     background: none;
+}
+
+p{
+    background-color: none;
 }
 
 .colored-box {

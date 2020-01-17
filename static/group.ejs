@@ -5,7 +5,8 @@
         <div class="columns">
             <% for(const expert of group.experts ) { %>
             <div class="column is-3">
-                <img src="/img/user-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
+                <img src="/img/user-solid.svg"
+                    style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
                 <p style="text-align: center;"><%= expert.fullName() %></p>
             </div>
             <% } %>
@@ -14,10 +15,162 @@
         <div class="columns">
             <% for(const member of group.members ) { %>
             <div class="column is-3">
-                <img src="/img/user-solid.svg" style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
+                <img src="/img/user-solid.svg"
+                    style="min-width:30px; width:15%; margin-left:auto; margin-right:auto; display:block;">
                 <p style="text-align: center;"><%= member.fullName() %></p>
             </div>
             <% } %>
         </div>
     </div>
+
+
+    <div class="site-container">
+        <header>
+            <div class="headline">
+                <h1>Gruppenübersicht</h1>
+            </div>
+        </header>
+        <div class="chat-container">
+            <div class="chat">
+                <div class="message-row own">
+                    <div class="message">
+                        <p>Hallo Leute</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>Willkommen in der Gruppe</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>ICH LIEBE THERMODYNAMIK</p>
+                    </div>
+                </div>
+
+                <div class="message-row own">
+                    <div class="message">
+                        <p>Wann treffen wir uns?</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>Diese App hat doch dieses coole Doodle Feature</p>
+                    </div>
+                </div>
+
+                <div class="message-row own">
+                    <div class="message">
+                        <p>Stimmt, die hat ja echt alles!</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>Beste App!! 😍😍</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>Und wo treffen wir uns?</p>
+                    </div>
+                </div>
+
+                <div class="message-row own">
+                    <div class="message">
+                        <p>Gute Frage!</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>Ich lerne immer ganz gerne im Grotrian</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>GROTRIAN?? WTF ist mit dir falsch gelaufen</p>
+                    </div>
+                </div>
+
+                <div class="message-row own">
+                    <div class="message">
+                        <p>Also Grotrian ist auch nicht so meins</p>
+                    </div>
+                </div>
+
+                <div class="message-row other">
+                    <div class="message">
+                        <p>Da hat mir ein Obdachloser mal die Lernmaterialien geklaut :(</p>
+                    </div>
+                </div>
+
+                <div class="message-row own">
+                    <div class="message">
+                        <p>Lol!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="files-and-input-container">
+            <div class="chat-input-container">
+                <!--<form class="chat-input-form" action="" method="">-->
+                <input type="text" name="" value="" class="chat-input">
+                <!--</form>-->
+            </div>
+            <div class="files-button-container">
+                <div class="files-button">
+                    Dateien
+                </div>
+            </div>
+        </div>
+        <div class="myfooter">
+            <div class="doodle-outline">
+                <div class="doodle-button">
+                    <img src="/icons/termine.svg" alt="">
+                </div>
+            </div>
+            <div class="chat-outline">
+                <div class="chat-button">
+                    <img src="/icons/chat.svg" alt="">
+                </div>
+            </div>
+            <div class="tutor-outline">
+                <div class="tutor-button"">
+                    <img src="/icons/tutor.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            let chat = document.getElementsByClassName("chat")[0];
+            let input = document.getElementsByClassName("chat-input")[0];
+            let inputForm = document.getElementsByClassName("chat-input-form")[0];
+
+            let sendMessage = (message, origin) => {
+                let element = "<div class = 'message-row origin'><div class = 'message'><p>placeholder</p></div></div>";
+                element = element.replace("origin", origin);
+                element = element.replace("placeholder", message);
+                chat.innerHTML += element;
+            }
+
+            input.onkeydown = function (event) {
+                if (event.keyCode == 13) {
+                    sendMessage(input.value, 'own');
+                    input.value = "";
+                }
+            }
+
+
+        </script>
+    </div>
+
+
+
 </div>
