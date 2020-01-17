@@ -1,78 +1,64 @@
 <div>
   <form method="POST">
+    <h1 class="isLeftText">Themengebiet</h1>
+    <input type="text" name="topicName"><br>
+    <h1 class="isLeftText">Level</h1>
 
-      <h1 class="isLeftText">Themengebiet</h1>
+    <label class="radioContainer">
+      <input class="isRadioButton" name="levelRadio1" type="checkbox" id="levelRadio1" checked="checked">
+    </label>
 
-      <form>
-          <input type="text" name="fname"><br>
-      </form>
+    <label class="radioContainer">
+      <input class="isRadioButton" name="levelRadio2" type="checkbox" id="levelRadio2" checked=false>
+    </label>
 
-      <h1 class="isLeftText">Level</h1>
+    <label class="radioContainer">
+      <input class="isRadioButton" name="levelRadio3" type="checkbox" id="levelRadio3" checked=false>
+    </label>
 
-      <label class="radioContainer">
-          <input class="isRadioButton" type="checkbox" id="levelRadio1" checked="checked">
-      </label>
+    <label class="radioContainer">
+      <input class="isRadioButton" name="levelRadio4" type="checkbox" id="levelRadio4" checked=false>
+    </label>
 
-      <label class="radioContainer">
-          <input class="isRadioButton" type="checkbox" id="levelRadio2" checked=false>
-      </label>
+    <label class="radioContainer">
+      <input class="isRadioButton" name="levelRadio5" type="checkbox" id="levelRadio5" checked=false>
+    </label>
 
-      <label class="radioContainer">
-          <input class="isRadioButton" type="checkbox" id="levelRadio3" checked=false>
-      </label>
+    <h1 class="isLeftText">
+      Gruppe
+      <input type="checkbox" id="groupCheckbox">
+    </h1>
 
-      <label class="radioContainer">
-          <input class="isRadioButton" type="checkbox" id="levelRadio4" checked=false>
-      </label>
-
-      <label class="radioContainer">
-          <input class="isRadioButton" type="checkbox" id="levelRadio5" checked=false>
-      </label>
-
-      <h1 class="isLeftText">
-          Gruppe
-          <input type="checkbox" id="groupCheckbox">
-      </h1>
-
-      <h2>maximale Größe</h2>
-      <form>
-          <input type="number" min="2" step="1" name="fname"><br>
-      </form>
-
-
-      <form>
-          <button type="submit" name="submitTopic">Weiter</button>
-      </form>
-
+    <h2>maximale Größe</h2>
+    <input type="number" min="2" step="1" name="maxGroupNumber"><br>
+    <button type="submit" name="submitTopic">Weiter</button>
   </form>
-
-
   <script>
 
-      window.onload = function () {
+    window.onload = function () {
 
-          for (let i = 1; i <= 5; i++) {
+      for (let i = 1; i <= 5; i++) {
 
-              document.getElementById("levelRadio" + i).addEventListener('input', () => {
-                  fillLevelsTo(i)
-              });
-          }
-
+        document.getElementById("levelRadio" + i).addEventListener('input', () => {
+          fillLevelsTo(i)
+        });
       }
 
-      function fillLevelsTo(clickedLevel) {
+    }
 
-          for (let i = 1; i <= 5; i++) {
-              console.log(i);
+    function fillLevelsTo(clickedLevel) {
 
-              if (i <= clickedLevel) {
-                  document.getElementById("levelRadio" + i).checked = "checked";
-              } else {
-                  document.getElementById("levelRadio" + i).checked = false;
-              }
-          }
+      for (let i = 1; i <= 5; i++) {
+        console.log(i);
 
+        if (i <= clickedLevel) {
+          document.getElementById("levelRadio" + i).checked = "checked";
+        } else {
+          document.getElementById("levelRadio" + i).checked = false;
+        }
       }
+
+    }
 
   </script>
 
