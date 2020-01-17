@@ -2,7 +2,8 @@
 root {
     --primary-color: #4987aa;
     --secondary-color: #a5bfcd;
-    --icon-backdrop-color: #fcfcfd;
+    /* --icon-backdrop-color: #fcfcfd; */
+    --icon-backdrop-color: rgb(248, 249, 250);
     --default-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
     --primary-text-color: white;
     --inverse-text-color: black;
@@ -48,14 +49,14 @@ h2 {
     text-align: right;
 }
 
-.isRadioButton{
+.isRadioButton {
     display: none;
 }
 
 .radioGroup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 200px;
+    width: 50%;
     position: relative;
     left: 25%;
 }
@@ -79,10 +80,32 @@ h2 {
     top: -10px;
 }
 
+.radioContainer{
+    width: 0px;
+}
+
 .radioContainer input:checked~.checkStatus {
     background-color: var(--primary-color);
 }
 
 input {
     color: var(--inverse-text-color);
+    border-radius: 5px;
+    border: none;
+    background-color: var(--icon-backdrop-color);
+    box-shadow: var(--default-shadow);
+    height: 30px;
+    align-self: center;
+}
+
+.submitButton {
+    position: sticky;
+    bottom: 10px;
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    width: 100px;
+    height: 40px;
+    margin-top: 60px;
+    border: none;
+    box-shadow: var(--default-shadow);
 }
