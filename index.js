@@ -30,5 +30,7 @@ app.get('/vision', (req, res) => renderPageWithData(res, {
     includeData: {}
 }));
 
+const grouplistController = require('./controllers/grouplistcontroller.js');
+app.get('/user/groups', (req, res) => grouplistController.get(req, res));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
