@@ -54,16 +54,18 @@
     border-radius: 30px;
 }
 
-.continue-button p {
+.continue-button a{
     background-color: transparent;
     color:white;
     font-size: 40px;
+    text-decoration: none;
 }
 
 .decision-1-card p, .decision-2-card p {
     font-size: 50px;
     background-color: transparent;
 }
+
 
 /*
     Redundanz ahead :D

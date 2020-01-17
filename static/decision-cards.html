@@ -17,7 +17,7 @@
             </div>
             <div class="button-container">
                 <div class="continue-button">
-                    <p>Weiter</p>
+                    <a href = "/topic/create/goal" id ="continueBtn" =>Weiter</a>
                 </div>
             </div>
         </div>
@@ -26,7 +26,10 @@
     <script type="text/javascript">
         let card1 = document.getElementsByClassName("decision-1-card")[0];
         let card2 = document.getElementsByClassName("decision-2-card")[0];
+        let button = document.getElementById("continueBtn");
 
+        //Interesse active -> /topic/create/goal
+        //Fähigkeit active -> /topic/create/expert
 
         let activateCard = (card, cardNum) => {
             card.classList.add("card"+cardNum+"active");
@@ -38,14 +41,21 @@
             card.classList.remove("card"+cardNum+"active");
         }
 
+        let getActiveCard = () => {
+            return (card1.classList.contains("card1active") ? 1 : 2);
+        }
+
         card1.addEventListener("touchstart", function() {
             activateCard(card1, 1);
             deactivateCard(card2, 2);
+            button.href = "/topic/create/expert";
         },false);
 
         card2.addEventListener("touchstart", function() {
             activateCard(card2, 2);
             deactivateCard(card1, 1);
+            button.href = "/topic/create/goal";
         },false);
+
     </script>
 </html>
