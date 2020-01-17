@@ -11,7 +11,7 @@ root {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    color: var(--primary-text-color);
+    /* color: var(--primary-text-color); */
     font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
