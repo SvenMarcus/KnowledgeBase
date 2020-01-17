@@ -1,17 +1,81 @@
 <div>
-    <h1>Test Titel</h1>
+  <form method="POST">
 
-    <h1>Themengebiet</h1>
+      <h1 class="isLeftText">Themengebiet</h1>
 
-    <form>
-        TestText <input type="text" name="fname"><br>
-        <input type="submit" value="Submit">
-      </form> 
+      <form>
+          <input type="text" name="fname"><br>
+      </form>
 
-    <h1>Level</h1>
+      <h1 class="isLeftText">Level</h1>
 
-    <h1>Gruppe</h1>
+      <label class="radioContainer">
+          <input class="isRadioButton" type="checkbox" id="levelRadio1" checked="checked">
+      </label>
 
-    <h2>maximale Größe</h2>
+      <label class="radioContainer">
+          <input class="isRadioButton" type="checkbox" id="levelRadio2" checked=false>
+      </label>
+
+      <label class="radioContainer">
+          <input class="isRadioButton" type="checkbox" id="levelRadio3" checked=false>
+      </label>
+
+      <label class="radioContainer">
+          <input class="isRadioButton" type="checkbox" id="levelRadio4" checked=false>
+      </label>
+
+      <label class="radioContainer">
+          <input class="isRadioButton" type="checkbox" id="levelRadio5" checked=false>
+      </label>
+
+      <h1 class="isLeftText">
+          Gruppe
+          <input type="checkbox" id="groupCheckbox">
+      </h1>
+
+      <h2>maximale Größe</h2>
+      <form>
+          <input type="number" min="2" step="1" name="fname"><br>
+      </form>
+
+
+      <form>
+          <button type="submit" name="submitTopic">Weiter</button>
+      </form>
+
+  </form>
+
+
+  <script>
+
+      window.onload = function () {
+
+          for (let i = 1; i <= 5; i++) {
+
+              document.getElementById("levelRadio" + i).addEventListener('input', () => {
+                  fillLevelsTo(i)
+              });
+          }
+
+      }
+
+      function fillLevelsTo(clickedLevel) {
+
+          for (let i = 1; i <= 5; i++) {
+              console.log(i);
+
+              if (i <= clickedLevel) {
+                  document.getElementById("levelRadio" + i).checked = "checked";
+              } else {
+                  document.getElementById("levelRadio" + i).checked = false;
+              }
+          }
+
+      }
+
+  </script>
+
+
 
 </div>
