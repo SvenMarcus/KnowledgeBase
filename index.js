@@ -15,25 +15,36 @@ const {
 const {
     GroupUserFeedComponent
 } = require("./view/groupuserfeedcomponent.js")
+
+const { Topic } = require("./model/Topic");
+
 const {
     TestComponent
 } = require("./view/testcomponent.js")
 
-const groupRepository = new GroupRepository();
+// const groupRepository = new GroupRepository();
 
-const dummyGroup = new Group("Technische Mechanik");
-console.log(dummyGroup.id);
-groupRepository.add(dummyGroup);
+// const dummyGroup = new Group("Technische Mechanik");
+// console.log(dummyGroup.id);
+// groupRepository.add(dummyGroup);
 
-const currentUser = new User("Frontend", "Fabian");
+// const currentUser = new User("Frontend", "Fabian");
 
-const defaultUser = new User("Franz", "Schubert");
-const defaultUser2 = new User("Herbert", "Müller");
-const defaultUser3 = new User("Jupp", "Dietrich");
+// const defaultUser = new User("Franz", "Schubert");
+// const defaultUser2 = new User("Herbert", "Müller");
+// const defaultUser3 = new User("Jupp", "Dietrich");
 
-defaultUser.joinGroup(dummyGroup);
-defaultUser2.joinGroup(dummyGroup);
-defaultUser3.joinGroup(dummyGroup);
+// const expertUser = new User("Prof. Dr. Dr. Hermann", "Schlaukopf");
+// const expertTopic = new Topic("Technische Mechanik");
+// expertTopic.expertLevel = 5;
+// expertTopic.teaching = true;
+// expertUser.topics.add(expertTopic);
+
+// defaultUser.joinGroup(dummyGroup);
+// defaultUser2.joinGroup(dummyGroup);
+// defaultUser3.joinGroup(dummyGroup);
+
+const appState = require('appstate.js');
 
 const component = new GroupUserFeedComponent(dummyGroup);
 const component2 = new TestComponent("test2");
@@ -73,6 +84,20 @@ app.get('/groups/:groupId', (req, res) => {
         includeData: {
             group: group
         }
+    })
+});
+
+app.get('/topic/create/:path', (req, res) => {
+    if (req.params.path != "goal" && req.params.path != "expert") {
+        res.status(404).send("Page not found");
+        return;
+    }
+
+    let title = req.params.path == "goal" ? "Interesse" : "Fähigkeit";
+    renderPageWithData(res, {
+        pageTitle: "${title} anlegen",
+        includePage: "createTopic",
+        includeData: {}
     })
 });
 

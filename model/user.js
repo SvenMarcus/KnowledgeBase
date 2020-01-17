@@ -1,5 +1,8 @@
+const uniqid = require('uniqid');
+
 class User {
     constructor(firstName, lastName) {
+        this.id = uniqid();
         this.firstName = firstName;
         this.lastName = lastName;
         this.groups = new Set();
