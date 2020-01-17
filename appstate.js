@@ -2,7 +2,7 @@ const { GroupRepository } = require("./model/grouprepository.js");
 const { UserRepository } = require('./model/userrepository.js')
 const { User } = require('./model/user.js')
 const { Group } = require("./model/group.js")
-const { Topic } = require("./model/Topic");
+const { Topic } = require("./model/topic.js");
 
 const appState = {
     groupRepository: new GroupRepository(),
