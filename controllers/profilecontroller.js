@@ -1,10 +1,13 @@
+const appState = require('../appstate.js');
 const { renderPageWithData } = require('../render.js')
 
 function get(req, res) {
     return renderPageWithData(res, {
         pageTitle: "Profil",
         includePage: "profile",
-        includeData: {}
+        includeData: {
+            topics: appState.currentUser.topics
+        }
     })
 }
 
