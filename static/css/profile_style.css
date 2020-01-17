@@ -61,7 +61,7 @@ header {
 }
 
 .column {
-    height: 100%;
+    height: 60%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ header {
 
 .row {
     width: 100%;
-    height: 40%;
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +99,7 @@ header {
 
 .topicBox {
     background-color: var(--primary-color);
-    height: 50%;
+    height: 70%;
     width: 70%;
     display: flex;
     justify-content: center;
