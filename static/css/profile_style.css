@@ -97,7 +97,7 @@ header {
     font-size: 25px;
 }
 
-.box {
+.topicBox {
     background-color: var(--primary-color);
     height: 50%;
     width: 70%;
