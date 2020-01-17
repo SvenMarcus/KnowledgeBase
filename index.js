@@ -22,4 +22,12 @@ app.post('/topic/create/:path', (req, res) => createTopicController.post(req, re
 const profileController = require('./controllers/profilecontroller.js');
 app.get('/profile', (req, res) => profileController.get(req, res));
 
+const { renderPageWithData } = require('./render.js');
+app.get('/vision', (req, res) => renderPageWithData(res, {
+    pageTitle: "Vision",
+    includePage: "vision",
+    includeData: {}
+}));
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
