@@ -1,6 +1,8 @@
-const appState = require('../appstate.js')
-const { renderPageWithData } = require('../render.js')
+const appState = require('../appstate.js');
+const { renderPageWithData } = require('../render.js');
 const { Topic } = require('../model/topic.js');
+
+const { makeGroupForTopic } = require('../model/dummydatafactory.js');
 
 function get(req, res) {
     if (req.params.path != "goal" && req.params.path != "expert") {
@@ -23,8 +25,15 @@ function post(req, res) {
     let user = appState.currentUser;
     user.topics.add(createTopic(req));
 
+    createDummyGroupForTopic(req);
+
     console.log(user);
     return res.redirect('/profile');
+}
+
+function createDummyGroupForTopic(req) {
+    let group = makeGroupForTopic(req.body.topicName, req.body.maxGroupSize);
+    appState.groupRepository.add(group);
 }
 
 function determineMaxLevel(req) {

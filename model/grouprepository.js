@@ -17,6 +17,10 @@ class GroupRepository {
     getGroupById(groupId) {
         return GROUPS.find((value) => value.id == groupId);
     }
+
+    getGroupsByTopic(topicName) {
+        return GROUPS.filter(group => group.topicName.toLowerCase() == topicName.toLowerCase());
+    }
 }
 
 module.exports = { GroupRepository: GroupRepository }
