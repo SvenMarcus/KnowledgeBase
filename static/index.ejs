@@ -176,6 +176,28 @@
 </head>
 
 <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <div>
+                    <img src="/img/logo.png" style="margin-left:auto; margin-right:auto; display:block;">
+                    <p style="text-align: center;">knowledgebase</p>
+                </div>
+            </a>
+            <a class="navbar-item" href="/profile">
+                <div>
+                    <img src="/img/user-solid.svg" style="margin-left:auto; margin-right:auto; display:block;">
+                    <p style="text-align: center;">Profil</p>
+                </div>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
     <% if (includePage && includeData) { %>
     <%- include(includePage, includeData) %>
     <% } %>
