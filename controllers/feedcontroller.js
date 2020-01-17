@@ -32,7 +32,7 @@ function collectFeedData(req) {
     let components = new Array();
     const currentUser = appState.currentUser;
     for (const topic of currentUser.topics) {
-        if (hasGroupForTopic(currentUser, topic)) break;
+        if (hasGroupForTopic(currentUser, topic)) continue;
 
         let groupsByTopic = appState.groupRepository.getGroupsByTopic(topic.name);
         if (groupsByTopic.length > 0)
