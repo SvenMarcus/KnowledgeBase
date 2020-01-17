@@ -1,0 +1,17 @@
+#vision-box {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.vision-li-main {
+    list-style-type: square;
+    text-align: left;
+    font-size: 30px;
+}
+
+.vision-li-sub {
+    text-align: left;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
