@@ -1,0 +1,53 @@
+<div class="site-container">
+    <link rel="stylesheet" href="/css/decision-cards-style.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <div class="decision-1-card">
+        <p>Fähigkeiten</p>
+    </div>
+
+    <div class="decision-2-card">
+        <p>Interessen</p>
+    </div>
+    <div class="button-container">
+        <div class="continue-button">
+            <a href="/topic/create/goal" id="continueBtn"=>Weiter</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    let card1 = document.getElementsByClassName("decision-1-card")[0];
+    let card2 = document.getElementsByClassName("decision-2-card")[0];
+    let button = document.getElementById("continueBtn");
+
+    //Interesse active -> /topic/create/goal
+    //Fähigkeit active -> /topic/create/expert
+
+    let activateCard = (card, cardNum) => {
+        card.classList.add("card" + cardNum + "active");
+        card.classList.remove("card" + cardNum + "notActive");
+    }
+
+    let deactivateCard = (card, cardNum) => {
+        card.classList.add("card" + cardNum + "notActive");
+        card.classList.remove("card" + cardNum + "active");
+    }
+
+    let getActiveCard = () => {
+        return (card1.classList.contains("card1active") ? 1 : 2);
+    }
+
+    card1.addEventListener("touchstart", function () {
+        activateCard(card1, 1);
+        deactivateCard(card2, 2);
+        button.href = "/topic/create/expert";
+    }, false);
+
+    card2.addEventListener("touchstart", function () {
+        activateCard(card2, 2);
+        deactivateCard(card1, 1);
+        button.href = "/topic/create/goal";
+    }, false);
+
+</script>

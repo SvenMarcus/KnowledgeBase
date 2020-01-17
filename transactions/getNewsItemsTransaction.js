@@ -1,3 +1,0 @@
-function getNewsItems(user) {
-    
-}

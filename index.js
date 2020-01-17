@@ -16,6 +16,7 @@ const groupController = require('./controllers/groupcontroller.js');
 app.get('/groups/:groupId', (req, res) => groupController.get(req, res));
 
 const createTopicController = require('./controllers/createtopiccontroller.js');
+app.get('/topic/create', (req, res) => createTopicController.get(req, res));
 app.get('/topic/create/:path', (req, res) => createTopicController.get(req, res));
 app.post('/topic/create/:path', (req, res) => createTopicController.post(req, res));
 
