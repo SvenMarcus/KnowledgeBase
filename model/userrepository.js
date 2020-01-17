@@ -10,12 +10,31 @@ class UserRepository {
         USERS.splice(index, 1);
     }
 
-    getAllGroups() {
+    getAllUsers() {
         return USERS.values();
     }
 
-    getGroupById(userId) {
+    getUserById(userId) {
         return USERS.find((value) => value.id == userId);
+    }
+
+    findExpertForTopic(topicName, minLevel) {
+        return USERS.find(expert => {
+            expert.topics.filter(topic => {
+                topic.topicName == topicName &&
+                    topic.isTeaching &&
+                    topic.expertLevel >= minLevel
+            });
+        });
+    }
+
+    findUsersWithInterest(topicName, level) {
+        return USERS.find(user => {
+            user.topics.filter(topic => {
+                topic.topicName == topicName &&
+                    topic.goalLevel == level
+            });
+        });
     }
 }
 
