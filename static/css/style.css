@@ -15,6 +15,7 @@ root {
     font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
+
 h1 {
     color: var(--inverse-text-color);
     font-size: 30px;
@@ -80,7 +81,7 @@ h2 {
     top: -10px;
 }
 
-.radioContainer{
+.radioContainer {
     width: 0px;
 }
 
