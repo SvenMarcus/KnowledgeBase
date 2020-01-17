@@ -4,8 +4,48 @@
         <meta charset="utf-8">
         <title></title>
         <link rel="stylesheet" href="./css/decision-cards-style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        <div class="site-container">
+            <div class="decision-1-card">
+                <p>Fähigkeiten</p>
+            </div>
 
+            <div class="decision-2-card">
+                <p>Interessen</p>
+            </div>
+            <div class="button-container">
+                <div class="continue-button">
+                    <p>Weiter</p>
+                </div>
+            </div>
+        </div>
     </body>
+
+    <script type="text/javascript">
+        let card1 = document.getElementsByClassName("decision-1-card")[0];
+        let card2 = document.getElementsByClassName("decision-2-card")[0];
+
+
+        let activateCard = (card, cardNum) => {
+            card.classList.add("card"+cardNum+"active");
+            card.classList.remove("card"+cardNum+"notActive");
+        }
+
+        let deactivateCard = (card, cardNum) => {
+            card.classList.add("card"+cardNum+"notActive");
+            card.classList.remove("card"+cardNum+"active");
+        }
+
+        card1.addEventListener("touchstart", function() {
+            activateCard(card1, 1);
+            deactivateCard(card2, 2);
+        },false);
+
+        card2.addEventListener("touchstart", function() {
+            activateCard(card2, 2);
+            deactivateCard(card1, 1);
+        },false);
+    </script>
 </html>

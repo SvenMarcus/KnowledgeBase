@@ -1,1 +1,175 @@
+.site-container {
+    width: 100%;
+    height: 1800px;
+    display: flex;
+    align-items: center;
+}
 
+.decision-1-card {
+    height: 640px;
+    width: 400px;
+    background-color: var(--primary-color);
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    right: -35px;
+    z-index: 1;
+}
+
+.decision-2-card {
+    height: 800px;
+    width: 500px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    right: 35px;
+    z-index: 2;
+}
+
+.button-container {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continue-button {
+    height: 60%;
+    width: 250px;
+    background-color: var(--primary-color);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.continue-button p {
+    background-color: transparent;
+    color:white;
+    font-size: 40px;
+}
+
+.decision-1-card p, .decision-2-card p {
+    font-size: 50px;
+    background-color: transparent;
+}
+
+/*
+    Redundanz ahead :D
+*/
+
+.card1active {
+      animation: activateCard1 0.3s linear;
+      animation-fill-mode:forwards;
+      animation-iteration-count: 1;
+}
+.card2active {
+      animation: activateCard2 0.3s linear;
+      animation-fill-mode:forwards;
+      animation-iteration-count: 1;
+}
+
+.card1notActive {
+    animation: deactivateCard1 0.3s linear;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+.card2notActive {
+    animation: deactivateCard2 0.3s linear;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes activateCard1 {
+    0% {
+        opacity: 0.6;
+        z-index: 1;
+        height: 640px;
+        width: 400px;
+
+    }
+
+    50% {
+        right: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 2;
+        height: 800px;
+        width: 500px;
+        right: -35px;
+    }
+}
+
+@keyframes activateCard2 {
+    0% {
+        opacity: 0.6;
+        z-index: 1;
+        height: 640px;
+        width: 400px;
+
+    }
+
+    50% {
+        right: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 2;
+        height: 800px;
+        width: 500px;
+        right: 35px;
+    }
+}
+
+@keyframes deactivateCard1 {
+    0% {
+        opacity: 1;
+        z-index: 2;
+        height: 800px;
+        width: 500px;
+
+    }
+    50% {
+        right: 0px;
+    }
+    100% {
+        opacity: 0.6;
+        z-index: 1;
+        height: 640px;
+        width: 400px;
+        right: -35px;
+    }
+}
+@keyframes deactivateCard2 {
+    0% {
+        opacity: 1;
+        z-index: 2;
+        height: 800px;
+        width: 500px;
+
+    }
+    50% {
+        right: 70px;
+    }
+    100% {
+        opacity: 0.6;
+        z-index: 1;
+        height: 640px;
+        width: 400px;
+        right: 35px;
+    }
+}
