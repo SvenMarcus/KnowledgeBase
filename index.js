@@ -22,31 +22,9 @@ const {
     TestComponent
 } = require("./view/testcomponent.js")
 
-// const groupRepository = new GroupRepository();
+const appState = require('./appstate.js');
 
-// const dummyGroup = new Group("Technische Mechanik");
-// console.log(dummyGroup.id);
-// groupRepository.add(dummyGroup);
-
-// const currentUser = new User("Frontend", "Fabian");
-
-// const defaultUser = new User("Franz", "Schubert");
-// const defaultUser2 = new User("Herbert", "Müller");
-// const defaultUser3 = new User("Jupp", "Dietrich");
-
-// const expertUser = new User("Prof. Dr. Dr. Hermann", "Schlaukopf");
-// const expertTopic = new Topic("Technische Mechanik");
-// expertTopic.expertLevel = 5;
-// expertTopic.teaching = true;
-// expertUser.topics.add(expertTopic);
-
-// defaultUser.joinGroup(dummyGroup);
-// defaultUser2.joinGroup(dummyGroup);
-// defaultUser3.joinGroup(dummyGroup);
-
-const appState = require('appstate.js');
-
-const component = new GroupUserFeedComponent(dummyGroup);
+const component = new GroupUserFeedComponent(appState.dummyGroup);
 const component2 = new TestComponent("test2");
 
 app.set('view engine', 'ejs');
@@ -67,16 +45,16 @@ app.get('/', (req, res) => renderPageWithData(res, {
 
 app.post('/', (req, res) => {
     if (req.body.JOIN) {
-        let group = groupRepository.getGroupById(req.body.JOIN);
+        let group = appState.groupRepository.getGroupById(req.body.JOIN);
         if (!group) return;
 
-        currentUser.joinGroup(group);
+        appState.currentUser.joinGroup(group);
         res.redirect('/groups/' + req.body.JOIN);
     }
 });
 
 app.get('/groups/:groupId', (req, res) => {
-    let group = groupRepository.getGroupById(req.params.groupId);
+    let group = appState.groupRepository.getGroupById(req.params.groupId);
     console.log(group)
     return renderPageWithData(res, {
         pageTitle: group.topicName,
