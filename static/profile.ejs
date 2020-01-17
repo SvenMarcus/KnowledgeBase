@@ -10,6 +10,23 @@
                 <div class="headline-row">
                     <h1>Fähigkeiten</h1>
                 </div>
+
+                <div class="row">
+                    <div class="topicBox colored-box" id="spanish">
+                        Spanisch
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="topicBox colored-box">
+                        App-Entwicklung
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="box-invisible">
+                        <h1>+</h1>
+                    </div>
+                </div> -->
+
                 <% for(const topic of topics) { %>
                 <% if (topic.goalLevel > 0) { %>
                 <div class="row">
@@ -25,9 +42,15 @@
                 </div>
                 <% } %>
                 <% } %>
-                <!-- <div class="row">
-                    <div class="topicBox colored-box" id="spanish">
-                        Spanisch
+            </div>
+            <div class="column">
+                <div class="headline-row">
+                    <h1>Interessen</h1>
+                </div>
+
+                <div class="row">
+                    <div class="box-invisible" id="spanish2">
+                        <h1>+</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -35,16 +58,12 @@
                         App-Entwicklung
                     </div>
                 </div>
-                <div class="row">
-                    <div class="box-invisible">
-                        <h1>+</h1>
-                    </div>
-                </div> -->
-            </div>
-            <div class="column">
-                <div class="headline-row">
-                    <h1>Interessen</h1>
-                </div>
+                <!-- <div class="row">
+                        <div class="topicBox colored-box">
+                            Kochen
+                        </div>
+                    </div> -->
+
                 <% for(const topic of topics) { %>
                 <% if (topic.expertLevel > 0) { %>
                 <div class="row">
@@ -60,21 +79,7 @@
                 </div>
                 <% } %>
                 <% } %>
-                <!-- <div class="row">
-                        <div class="box-invisible" id="spanish2">
-                            <h1>+</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="topicBox colored-box">
-                            App-Entwicklung
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="topicBox colored-box">
-                            Kochen
-                        </div>
-                    </div> -->
+
             </div>
         </div>
     </div>
