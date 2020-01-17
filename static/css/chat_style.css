@@ -33,7 +33,7 @@ header {
     width: 90%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: visible;
 }
 
 .message-row {
@@ -45,7 +45,7 @@ header {
 .message {
     height: 80%;
     width: 45%;
-    box-shadow: 10px 5px 5px rgba(0,0,0,0.3);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,14 +78,17 @@ header {
     justify-content: flex-start;
 }
 
-.own .message {
-
-}
+.own .message {}
 
 .own .message {
     background-color: var(--primary-color);
 }
 
+
+/* .aboveMyFooter {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+} */
 
 .myfooter {
     position: fixed;
@@ -100,7 +103,9 @@ header {
     z-index: 2;
 }
 
-.chat-outline, .doodle-outline, .tutor-outline {
+.chat-outline,
+.doodle-outline,
+.tutor-outline {
     position: relative;
     background-color: white;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+49,1+50,1+100 */
@@ -120,24 +125,28 @@ header {
     z-index: 2;
 }
 
-
 .chat-outline {
     top: -80px;
     height: 160px;
     width: 160px;
 }
+
 .doodle-outline {
     top: -80px;
     height: 160px;
     width: 160px;
 }
+
 .tutor-outline {
     top: -80px;
     height: 160px;
     width: 160px;
 }
 
-.chat-button, .doodle-button, .tutor-button, .files-button {
+.chat-button,
+.doodle-button,
+.tutor-button,
+.files-button {
     background-color: var(--primary-color);
     border-radius: 100%;
     display: flex;
@@ -151,14 +160,17 @@ header {
     height: 120px;
     width: 120px;
 }
+
 .doodle-button {
     height: 120px;
     width: 120px;
 }
+
 .tutor-button {
     height: 120px;
     width: 120px;
 }
+
 .files-and-input-container {
     height: 10%;
     display: flex;
@@ -174,25 +186,38 @@ header {
     align-items: center;
 }
 
+.messageText {
+    font-size: 22px;
+}
+
+.whiteText{
+    color: var(--primary-text-color);
+}
+
+.blackText{
+    color: var(--inverse-text-color);
+}
+
 .chat-input-container {
     width: 80%;
     height: 100%;
     margin-left: 5%;
-    display: flex;
+    margin-top: 80px;
     align-items: center;
 }
 
-/*.chat-input-form {
+.chat-input-form {
+    display: flex;
     width: 95%;
     height: 50%;
-}*/
+}
 
 .chat-input {
     width: 95%;
     height: 50%;
     text-align: left;
     font-size: 2rem;
-    color:black;
+    color: black;
     border: 2px solid var(--primary-color)
 }
 
