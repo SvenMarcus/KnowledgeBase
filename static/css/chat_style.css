@@ -181,14 +181,14 @@ footer {
     align-items: center;
 }
 
-.chat-input-form {
+/*.chat-input-form {
     width: 95%;
     height: 50%;
-}
+}*/
 
 .chat-input {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 50%;
     text-align: left;
     font-size: 2rem;
     color:black;
