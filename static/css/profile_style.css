@@ -7,6 +7,10 @@ header {
     align-items: flex-end;
 }
 
+.headline-row h1 {
+    font-size: 20px;
+}
+
 .profile-icon {
     height: 200px;
     width: 200px;
@@ -65,8 +69,6 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-content: space-between;
 }
 
 .row::after {
@@ -99,23 +101,23 @@ header {
 
 .topicBox {
     background-color: var(--primary-color);
-    height: 70%;
-    width: 70%;
+    height: 40%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    font-size: 20px;
+    font-size: 18px;
     z-index: 1;
 }
 
 .box-invisible {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
     background-color: var(--icon-backdrop-color);
     box-shadow: var(--default-shadow);
     border-radius: 100%;
@@ -125,7 +127,7 @@ header {
 footer {
     position: fixed;
     bottom: 0px;
-    height: 15%;
+    height: 10%;
     max-height: 150px;
     width: 100%;
     display: flex;
@@ -137,9 +139,9 @@ footer {
 
 .outline {
     position: relative;
-    top: -55px;
-    height: 110px;
-    width: 110px;
+    top: -35px;
+    height: 70px;
+    width: 70px;
     background-color: white;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+49,1+50,1+100 */
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
@@ -160,13 +162,13 @@ footer {
 
 .plus-symbol {
     color: white;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     background-color: var(--primary-color);
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
+    font-size: 40px;
     z-index: 2;
 }
