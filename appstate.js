@@ -10,7 +10,7 @@ const appState = {
     currentUser: new User("Frontend", "Fabian"),
     dummyGroup: null,
     setAppState: function () {
-        this.dummyGroup = new Group("Technische Mechanik");
+        this.dummyGroup = new Group("Thermodynamik");
         console.log(this.dummyGroup.id);
         this.groupRepository.add(this.dummyGroup);
         const defaultUser = new User("Franz", "Schubert");
@@ -18,7 +18,7 @@ const appState = {
         const defaultUser3 = new User("Jupp", "Dietrich");
 
         const expertUser = new User("Prof. Dr. Dr. Hermann", "Schlaukopf");
-        const expertTopic = new Topic("Technische Mechanik");
+        const expertTopic = new Topic("Thermodynamik");
         expertTopic.expertLevel = 5;
         expertTopic.teaching = true;
         expertUser.topics.add(expertTopic);
