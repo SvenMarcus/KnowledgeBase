@@ -38,6 +38,7 @@ p{
     background-color: var(--primary-color);
     color: var(--primary-text-color);
     box-shadow: var(--default-shadow);
+    border-radius: 5px;
 }
 
 .empty-box {
