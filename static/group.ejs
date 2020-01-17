@@ -2,7 +2,7 @@
     <div class="title"><%= group.topicName %></div>
     <div class="box">
         <p class="subtitle">Experten</p>
-        <div class="columns">
+        <div class="columns is-mobile">
             <% for(const expert of group.experts ) { %>
             <div class="column is-3">
                 <img src="/img/user-solid.svg"
@@ -12,7 +12,7 @@
             <% } %>
         </div>
         <p class="subtitle">Mitglieder</p>
-        <div class="columns">
+        <div class="columns is-mobile" style="justify-content:space-around">
             <% for(const member of group.members ) { %>
             <div class="column is-3">
                 <img src="/img/user-solid.svg"
