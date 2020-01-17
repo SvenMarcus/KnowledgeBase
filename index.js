@@ -20,6 +20,7 @@ const createTopicController = require('./controllers/createtopiccontroller.js');
 app.get('/topic/create/:path', (req, res) => createTopicController.get(req, res));
 app.post('/topic/create/:path', (req, res) => createTopicController.post(req, res));
 
-app.get('/profile', (req, res) => res.sendFile(path.join(__dirname, "static/profile.html")))
+const profileController = require('./controllers/profilecontroller.js');
+app.get('/profile', (req, res) => profileController.get(req, res));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
