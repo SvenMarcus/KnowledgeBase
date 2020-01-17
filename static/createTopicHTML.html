@@ -19,31 +19,36 @@
 
             <h1 class="isLeftText">Themengebiet</h1>
 
-            <form>
-                <input type="text" name="fname"><br>
-            </form>
+            <input type="text" name="fname"><br>
 
             <h1 class="isLeftText">Level</h1>
 
-            <label class="radioContainer">
-                <input class="isRadioButton" type="checkbox" id="levelRadio1" checked="checked">
-            </label>
+            <div class="radioGroup">
+                <label class="radioContainer">
+                    <input class="isRadioButton" type="checkbox" id="levelRadio1" checked="checked">
+                    <span class="checkStatus"></span>
+                </label>
 
-            <label class="radioContainer">
-                <input class="isRadioButton" type="checkbox" id="levelRadio2" checked=false>
-            </label>
+                <label class="radioContainer">
+                    <input class="isRadioButton" type="checkbox" id="levelRadio2" checked=false>
+                    <span class="checkStatus"></span>
+                </label>
 
-            <label class="radioContainer">
-                <input class="isRadioButton" type="checkbox" id="levelRadio3" checked=false>
-            </label>
+                <label class="radioContainer">
+                    <input class="isRadioButton" type="checkbox" id="levelRadio3" checked=false>
+                    <span class="checkStatus"></span>
+                </label>
 
-            <label class="radioContainer">
-                <input class="isRadioButton" type="checkbox" id="levelRadio4" checked=false>
-            </label>
+                <label class="radioContainer">
+                    <input class="isRadioButton" type="checkbox" id="levelRadio4" checked=false>
+                    <span class="checkStatus"></span>
+                </label>
 
-            <label class="radioContainer">
-                <input class="isRadioButton" type="checkbox" id="levelRadio5" checked=false>
-            </label>
+                <label class="radioContainer">
+                    <input class="isRadioButton" type="checkbox" id="levelRadio5" checked=false>
+                    <span class="checkStatus"></span>
+                </label>
+            </div>
 
             <h1 class="isLeftText">
                 Gruppe
@@ -51,14 +56,10 @@
             </h1>
 
             <h2>maximale Größe</h2>
-            <form>
-                <input type="number" min="2" step="1" name="fname"><br>
-            </form>
+            <input type="number" min="2" step="1" name="fname"><br>
 
 
-            <form>
-                <button type="submit" name="submitTopic">Weiter</button>
-            </form>
+            <button type="submit" name="submitTopic">Weiter</button>
 
         </form>
 
