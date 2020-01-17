@@ -3,6 +3,7 @@
     height: 1800px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .decision-1-card {
@@ -101,7 +102,7 @@
     }
 
     50% {
-        right: 0px;
+        right: 35px;
     }
 
     100% {
@@ -123,7 +124,7 @@
     }
 
     50% {
-        right: 0px;
+        right: -35px;
     }
 
     100% {
@@ -144,7 +145,7 @@
 
     }
     50% {
-        right: 0px;
+        right: 35px;
     }
     100% {
         opacity: 0.6;
@@ -163,7 +164,7 @@
 
     }
     50% {
-        right: 70px;
+        right: -35px;
     }
     100% {
         opacity: 0.6;
