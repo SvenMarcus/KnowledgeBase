@@ -39,3 +39,40 @@ h2 {
     box-shadow: none;
     color: white;
 }
+
+.isLeftText {
+    text-align: left;
+}
+
+.isRightText {
+    text-align: right;
+}
+
+.isRadioButton {
+    margin: 10px;
+}
+
+.radioContainer {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--icon-backdrop-color);
+    box-shadow: var(--default-shadow);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.radioContainer input:checked {
+    background-color: #2196F3;
+    border-style: solid;
+}
+
+input {
+    color: var(--inverse-text-color);
+}
