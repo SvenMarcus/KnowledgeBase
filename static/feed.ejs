@@ -13,13 +13,21 @@
     <div class="section">
         <div class="container">
             <div class="tile is-ancestor is-vertical">
-                <div class="tile box">
-                    <p class="subtitle">Nächster Termin</p>
-                    <p></p>
+
+                <h1 class="title">Nächster Termin</h1>
+                <div class="box">
+                    <p>
+                        <big>App-Entwicklung<br></big>
+                        Haus der Wissenschaft<br>
+                        17.01 - 8:30 Uhr
+                    </p>
                 </div>
-                
-                <p class="title">Neuigkeiten</p>
+
+
+                <h1 class="title" style="margin-top: 50px;">Neuigkeiten</h1>
+
                 <div class="tile">
+
                     <% for (const item of feedItems) { %>
                     <div class="tile box">
                         <%- item.render() %>
