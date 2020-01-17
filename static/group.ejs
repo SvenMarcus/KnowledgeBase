@@ -34,59 +34,59 @@
             <div class="chat">
                 <div class="message-row own">
                     <div class="message">
-                        <p>Hallo Leute</p>
+                        <div class="messageText whiteText">Hallo Leute</div>
                     </div>
                 </div>
 
                 <div class="message-row other">
                     <div class="message">
-                        <p>Willkommen in der Gruppe</p>
+                        <div class="messageText">Willkommen in der Gruppe</div>
                     </div>
                 </div>
 
                 <div class="message-row other">
                     <div class="message">
-                        <p>ICH LIEBE THERMODYNAMIK</p>
+                        <div class="messageText">ICH LIEBE THERMODYNAMIK</div>
                     </div>
                 </div>
 
                 <div class="message-row own">
                     <div class="message">
-                        <p>Wann treffen wir uns?</p>
+                        <div class="messageText whiteText">Wann treffen wir uns?</div>
                     </div>
                 </div>
 
                 <div class="message-row other">
                     <div class="message">
-                        <p>Diese App hat doch dieses coole Doodle Feature</p>
+                        <div class="messageText">Diese App hat doch dieses coole Doodle Feature</div>
                     </div>
                 </div>
 
                 <div class="message-row own">
                     <div class="message">
-                        <p>Stimmt, die hat ja echt alles!</p>
+                        <div class="messageText whiteText">Stimmt, die hat ja echt alles!</div>
                     </div>
                 </div>
 
                 <div class="message-row other">
                     <div class="message">
-                        <p>Beste App!! 😍😍</p>
+                        <div class="messageText">Beste App!! 😍😍</div>
                     </div>
                 </div>
 
                 <div class="message-row other">
                     <div class="message">
-                        <p>Und wo treffen wir uns?</p>
+                        <div class="messageText">Und wo treffen wir uns?</div>
                     </div>
                 </div>
 
                 <div class="message-row own">
                     <div class="message">
-                        <p>Gute Frage!</p>
+                        <div class="messageText whiteText">Gute Frage!</div>
                     </div>
                 </div>
 
-                <div class="message-row other">
+                <!-- <div class="message-row other">
                     <div class="message">
                         <p>Ich lerne immer ganz gerne im Grotrian</p>
                     </div>
@@ -114,39 +114,45 @@
                     <div class="message">
                         <p>Lol!</p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="files-and-input-container">
-            <div class="chat-input-container">
-                <!--<form class="chat-input-form" action="" method="">-->
-                <input type="text" name="" value="" class="chat-input">
-                <!--</form>-->
-            </div>
-            <div class="files-button-container">
-                <div class="files-button">
-                    Dateien
-                </div>
-            </div>
-        </div>
-        <div class="myfooter">
-            <div class="doodle-outline">
-                <div class="doodle-button">
-                    <img src="/icons/termine.svg" alt="">
-                </div>
-            </div>
-            <div class="chat-outline">
-                <div class="chat-button">
-                    <img src="/icons/chat.svg" alt="">
-                </div>
-            </div>
-            <div class="tutor-outline">
-                <div class="tutor-button"">
-                    <img src="/icons/tutor.svg" alt="">
-                </div>
+                </div> -->
+
+
+
             </div>
         </div>
 
+        <div class="aboveMyFooter">
+            <div class="files-and-input-container">
+                <div class="chat-input-container">
+                    <!--<form class="chat-input-form" action="" method="">-->
+                    <input type="text" name="" value="" class="chat-input">
+                    <!--</form>-->
+                </div>
+                <div class="files-button-container">
+                    <div class="files-button">
+                        Dateien
+                    </div>
+                </div>
+            </div>
+
+            <div class="myfooter">
+                <div class="doodle-outline">
+                    <div class="doodle-button">
+                        <img src="/icons/termine.svg" alt="">
+                    </div>
+                </div>
+                <div class="chat-outline">
+                    <div class="chat-button">
+                        <img src="/icons/chat.svg" alt="">
+                    </div>
+                </div>
+                <div class="tutor-outline">
+                    <div class="tutor-button"">
+                    <img src="/icons/tutor.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script type="text/javascript">
             let chat = document.getElementsByClassName("chat")[0];
@@ -154,7 +160,7 @@
             let inputForm = document.getElementsByClassName("chat-input-form")[0];
 
             let sendMessage = (message, origin) => {
-                let element = "<div class = 'message-row origin'><div class = 'message'><p>placeholder</p></div></div>";
+                let element = "<div class = 'message-row origin'><div class = 'message'><div  class='messageText whiteText'>placeholder</div></div></div>";
                 element = element.replace("origin", origin);
                 element = element.replace("placeholder", message);
                 chat.innerHTML += element;
