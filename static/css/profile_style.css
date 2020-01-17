@@ -159,6 +159,7 @@ footer {
 }
 
 .plus-symbol {
+    color: white;
     height: 120px;
     width: 120px;
     background-color: var(--primary-color);
